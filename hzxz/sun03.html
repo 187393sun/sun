@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sum{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 999999px;
+            transform: rotateX(20deg) rotateY(20deg);
+            animation: mevn 3s linear infinite;
+
+        }
+        .box{
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 999999px;
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            text-align: center;
+            line-height: 200px;
+        }
+        .top{
+            background-color: rgba(161, 13, 24, 0.8);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .bottom{
+            background-color: rgba(38, 19, 161, 0.8);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .left{
+            background-color: rgba(26, 161, 15, 0.8);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .right{
+            background-color: rgba(161, 11, 144, 0.8);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .front{
+            background-color: rgba(161, 140, 15, 0.8);
+            transform: translateZ(100px);
+        }
+        .monarch{
+            background-color: rgba(8, 154, 161, 0.8);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .box:hover div:nth-of-type(1){
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .box:hover div:nth-of-type(2){
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+        .box:hover div:nth-of-type(3){
+              transform: rotateY(-90deg) translateZ(200px);
+        }
+        .box:hover div:nth-of-type(4){
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .box:hover div:nth-of-type(5){
+            transform:translateZ(200px);
+        }
+        .box:hover div:nth-of-type(6){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        @keyframes mevn {
+            0%{
+                transform: rotateX(20deg)  rotateY(20deg);
+            }
+            100%{
+                transform: rotateX(380deg)  rotateY(380deg);
+            }
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            perspective: 999999px;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            transform: rotateX(20deg) rotateY(20deg);
+            transform: translateZ(30px) translate(15px,15px);
+        }
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+
+            text-align: center;
+            line-height: 100px;
+        }
+       .top1{
+            background-color: rgba(161, 13, 24, 0.8);
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .bottom1{
+            background-color: rgba(38, 19, 161, 0.8);
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        .left1{
+            background-color: rgba(26, 161, 15, 0.8);
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .right1{
+            background-color: rgba(161, 11, 144, 0.8);
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .front1{
+            background-color: rgba(161, 140, 15, 0.8);
+            transform: translateZ(50px);
+        }
+        .monarch1{
+            background-color: rgba(8, 154, 161, 0.8);
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+    </style>
+</head>
+<body>
+<div class="sum">
+<div class="box">
+    <div class="top">上面</div>
+    <div class="bottom">下面</div>
+    <div class="left">左面</div>
+    <div class="right">右面</div>
+    <div class="front">前面</div>
+    <div class="monarch">后面</div>
+</div>
+    <div class="box1">
+    <div class="top1">上</div>
+    <div class="bottom1">下</div>
+    <div class="left1">左</div>
+    <div class="right1">右</div>
+    <div class="front1">前</div>
+    <div class="monarch1">后</div>
+    </div>
+</div>
+</body>
+</html>
